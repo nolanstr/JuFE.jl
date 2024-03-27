@@ -1,0 +1,13 @@
+The input file format used in this package is the yaml file format.
+
+In each yaml file you need to declare:
+    1. NELX - Number of elements
+    2. NX - Number of nodes
+    3. Nodal_Coords - Corrdinates of each node in the formation (ID, X_coord,
+    Y_coord)
+    4. Elements - then specify type (Only supporting T2D2 currently)
+        - T2D2 format - (ID, N1, N2, Area, Material ID)
+    5. Materials - Material information in the form (ID, E, nu, rho)
+    6. Boundary_Conditions - Specify:
+        - POINT_LOADS - (NODE ID, DIRECTION (1,2,3), MAGNITUDE)
+        - DISPLACEMENT_CONDITIONS - (NODE ID, DIRECTION, MAGNITUDE)
