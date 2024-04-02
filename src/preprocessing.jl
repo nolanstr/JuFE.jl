@@ -6,6 +6,11 @@ include("element_modules.jl")
 include("stiffness_modules.jl")
 include("mass_module.jl")
 
+"""
+Currently code is only implmented for non-linear with 
+time-dependent load.
+"""
+
 function ReadYAML(YAML_filename)
     """
         ReadYAML(YAML_filename)

@@ -1,0 +1,24 @@
+NELX: 1
+NX:   2
+MASS_MATRIX: "HRZ"
+COORDS: "1DC"
+METHOD: "Central Difference"
+METHOD_ARGS: nothing 
+BC_METHOD: "Elimination"
+
+NODAL_COORDS: #ID, X_coord, Y_coord
+  - 1, 0.
+  - 2, 1.
+
+ELEMENTS:
+  B11: #ID, N1, N2, Area, Material ID
+    - 1, 1, 2, 1, 1
+
+MATERIALS: #ID, E, nu, rho
+  - 1, 1.E6, 0.0, 1
+
+BOUNDARY_CONDITIONS:
+  POINT_LOADS: #NODE ID, DIRECTION(1,2,3), TIME_DEPENDENT, MAGNITUDE
+    - 2, 1, true, ( 0.5 * t + 0.3 * t^2 ) * 10^2
+  DISPLACEMENT_CONDITIONS: #NODE ID, DIRECTION, MAGNITUDE
+    - 1, 1, 0.

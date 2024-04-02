@@ -1,4 +1,3 @@
-using AutoDocstring
 
 function ApplyPointLoads(F, information, t = 0)
     """
